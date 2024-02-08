@@ -20,14 +20,8 @@ contract DataMine {
     // Mapping to store user authentication status
     mapping(address => bool) public authenticatedUsers;
 
-    // SpruceID contract address
-    address public spruceIDContract;
-
     // Event to notify when a user is authenticated
     event UserAuthenticated(address user);
-
-    // Event to notify when data is transferred
-    event DataTransferred(uint256 id, address buyer);
 
     // Modifier to ensure that the user is authenticated through SpruceID
     modifier onlyAuthenticated() {
@@ -43,11 +37,6 @@ contract DataMine {
 
         authenticatedUsers[msg.sender] = true;
         emit UserAuthenticated(msg.sender);
-    }
-
-    // Function to set the SpruceID contract address
-    function setSpruceIDContract(address _spruceIDContract) external {
-        spruceIDContract = _spruceIDContract;
     }
 
     // Function to list data for sale (only authenticated users)
@@ -69,8 +58,7 @@ contract DataMine {
         // Mark data item as sold
         dataItems[id].available = false;
 
-        // Notify data transfer
-        emit DataTransferred(id, msg.sender);
+        // Implement data transfer mechanism (off-chain storage, etc.)
     }
 
     // Function to cancel listing (by seller and only authenticated users)
@@ -90,7 +78,6 @@ contract DataMine {
 
     // Function to search data by data type (dataHash)
     function searchData(string memory dataHash) public view returns (DataItem[] memory) {
-        DataItem[] memory searchData;
         uint256 count = 0;
         for (uint256 i = 0; i < nextId; i++) {
             if (keccak256(bytes(dataItems[i].dataHash)) == keccak256(bytes(dataHash))) {
@@ -98,16 +85,16 @@ contract DataMine {
             }
         }
 
-        searchData = new DataItem[](count);
+        DataItem[] memory searchDataResult = new DataItem[](count);
         count = 0;
 
         for (uint256 i = 0; i < nextId; i++) {
             if (keccak256(bytes(dataItems[i].dataHash)) == keccak256(bytes(dataHash))) {
-                searchData[count] = dataItems[i];
+                searchDataResult[count] = dataItems[i];
                 count++;
             }
         }
 
-        return searchData;
+        return searchDataResult;
     }
 }
