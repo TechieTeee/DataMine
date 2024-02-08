@@ -2,5 +2,8 @@
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
     "hardhat": "^2.19.5"
+  },
+  "dependencies": {
+    "@spruceid/rebase-client": "^0.19.0"
   }
 }
