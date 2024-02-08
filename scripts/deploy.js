@@ -1,9 +1,3 @@
-// We require the Hardhat Runtime Environment explicitly here. This is optional
-// but useful for running the script in a standalone fashion through `node <script>`.
-//
-// You can also run a script with `npx hardhat run <script>`. If you do that, Hardhat
-// will compile your contracts, add the Hardhat Runtime Environment's members to the
-// global scope, and execute the script.
 const hre = require("hardhat");
 
 async function main() {
@@ -12,16 +6,17 @@ async function main() {
 
   const lockedAmount = hre.ethers.parseEther("0.001");
 
-  const lock = await hre.ethers.deployContract("Lock", [unlockTime], {
+  // Replace "Lock" with "DataMine" in the deployContract function
+  const dataMine = await hre.ethers.deployContract("DataMine", [unlockTime], {
     value: lockedAmount,
   });
 
-  await lock.waitForDeployment();
+  await dataMine.waitForDeployment();
 
   console.log(
-    `Lock with ${ethers.formatEther(
+    `DataMine with ${ethers.utils.formatEther(
       lockedAmount
-    )}ETH and unlock timestamp ${unlockTime} deployed to ${lock.target}`
+    )}ETH and unlock timestamp ${unlockTime} deployed to ${dataMine.address}`
   );
 }
 
