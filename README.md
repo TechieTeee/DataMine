@@ -1,4 +1,4 @@
-# DataMine: Decentralized Data Marketplace
+# DataMine: Decentralized Data Brokerage Marketplace
 
 Welcome to DataMine, a decentralized data marketplace project that empowers individuals to take control of their data ownership. This project utilizes the Ethereum blockchain, Scroll Layer 2 scalability, and SpruceID for decentralized identity services.
 
