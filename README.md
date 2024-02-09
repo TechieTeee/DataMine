@@ -12,6 +12,14 @@ In a world driven by data, questions about ownership and control of personal inf
 - **Layer 2 Scalability:** Utilizing Scroll for Ethereum Layer 2 scalability, DataMine ensures faster transaction speeds and lower fees.
 - **SpruceID Integration:** Secure and efficient identity verification through SpruceID ensures a trustless environment for data transactions.
 
+## Deployment Details
+- Transaction Hash: 0x7ba54a418a7f82a7b1995c61d29b34f1153669e87789a4a7122603d4990672dc
+- Block Hash: 0x4d9fd8ba953ff8762b961eaae8167edaaa27108d57c1d4752e9ed03969782089
+- Contract Address: 0xcaea8fff8233d35be3c6e469a263d34007d1394e
+
+  ![image](https://github.com/TechieTeee/DataMine/assets/100870737/b76ab731-b792-45ed-a25b-16271ad0e6f6)
+
+
 ## How to Run
 
 1. Clone the repository:
