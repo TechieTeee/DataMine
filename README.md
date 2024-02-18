@@ -12,6 +12,11 @@ In a world driven by data, questions about ownership and control of personal inf
 - **Layer 2 Scalability:** Utilizing Scroll for Ethereum Layer 2 scalability, DataMine ensures faster transaction speeds and lower fees.
 - **SpruceID Integration:** Secure and efficient identity verification through SpruceID ensures a trustless environment for data transactions.
 
+## Tech Stack
+- Scroll
+- Solidity
+- JS
+
 ## Deployment Details
 - Transaction Hash: 0x7ba54a418a7f82a7b1995c61d29b34f1153669e87789a4a7122603d4990672dc
 - Block Hash: 0x4d9fd8ba953ff8762b961eaae8167edaaa27108d57c1d4752e9ed03969782089
