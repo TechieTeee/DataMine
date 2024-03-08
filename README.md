@@ -14,6 +14,7 @@ In a world driven by data, questions about ownership and control of personal inf
 
 ## Tech Stack
 - Scroll
+- SpruceID
 - Solidity
 - JS
 
